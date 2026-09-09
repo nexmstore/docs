@@ -1,0 +1,371 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "palm",
+  "name": "NEXM Core",
+  "colors": {
+    "primary": "#7C5CFF",
+    "light": "#A99BFF",
+    "dark": "#1E1B2E"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      }
+    ],
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "overview/introduction",
+              "overview/what-is-nexm-core",
+              "overview/architecture",
+              "overview/supported-integrations",
+              "overview/release-status"
+            ]
+          },
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/requirements",
+              "getting-started/installation",
+              "getting-started/resource-start-order",
+              "getting-started/configuration",
+              "getting-started/verify-installation",
+              "getting-started/first-resource"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/core-object",
+              "concepts/framework-abstraction",
+              "concepts/inventory-abstraction",
+              "concepts/server-vs-client",
+              "concepts/error-handling",
+              "concepts/resource-ownership",
+              "concepts/security-model"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/overview",
+              {
+                "group": "Frameworks",
+                "pages": [
+                  "integrations/frameworks/esx",
+                  "integrations/frameworks/qbcore",
+                  "integrations/frameworks/qbox"
+                ]
+              },
+              {
+                "group": "Inventory",
+                "pages": [
+                  "integrations/inventory/ox-inventory",
+                  "integrations/inventory/qb-inventory",
+                  "integrations/inventory/esx-native",
+                  "integrations/inventory/qs-inventory",
+                  "integrations/inventory/custom"
+                ]
+              },
+              {
+                "group": "Notifications",
+                "pages": [
+                  "integrations/notifications/ox-lib",
+                  "integrations/notifications/esx",
+                  "integrations/notifications/qbcore",
+                  "integrations/notifications/qbox",
+                  "integrations/notifications/custom"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/creating-a-nexm-product",
+              "guides/fxmanifest",
+              "guides/registering-a-resource",
+              "guides/creating-permissions",
+              "guides/creating-callbacks",
+              "guides/using-inventory-safely",
+              "guides/handling-money-safely",
+              "guides/creating-locales",
+              "guides/cross-resource-services",
+              "guides/optional-features",
+              "guides/database-usage",
+              "guides/security-best-practices"
+            ]
+          },
+          {
+            "group": "Examples",
+            "pages": [
+              "examples/overview",
+              "examples/player-lookup",
+              "examples/job-permission-check",
+              "examples/money-reward",
+              "examples/inventory-check",
+              "examples/inventory-metadata",
+              "examples/server-callback",
+              "examples/client-callback",
+              "examples/notifications",
+              "examples/locales",
+              "examples/services",
+              "examples/complete-resource"
+            ]
+          },
+          {
+            "group": "Operations",
+            "pages": [
+              "operations/core-status",
+              "operations/health-checks",
+              "operations/diagnostics",
+              "operations/resource-restarts",
+              "operations/foundational-restarts",
+              "operations/production-recommendations"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/core-not-ready",
+              "troubleshooting/capability-unavailable",
+              "troubleshooting/notifications-not-working",
+              "troubleshooting/callback-timeout",
+              "troubleshooting/adapter-problems",
+              "troubleshooting/start-order-problems"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "reference/configuration",
+              "reference/error-model",
+              "reference/security-rules",
+              "reference/supported-integrations",
+              "reference/version-compatibility",
+              "reference/changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "api/introduction",
+              "api/server-vs-client"
+            ]
+          },
+          {
+            "group": "Player",
+            "pages": [
+              "api/player/overview",
+              "api/player/get",
+              "api/player/exists",
+              "api/player/get-identifier",
+              "api/player/get-character-identifier",
+              "api/player/get-account-identifier",
+              "api/player/get-license",
+              "api/player/get-character-name",
+              "api/player/get-job",
+              "api/player/get-job-grade",
+              "api/player/get-source",
+              "api/player/is-online",
+              "api/player/get-framework-object"
+            ]
+          },
+          {
+            "group": "Jobs",
+            "pages": [
+              "api/jobs/overview",
+              "api/jobs/get",
+              "api/jobs/has",
+              "api/jobs/has-any",
+              "api/jobs/minimum-grade",
+              "api/jobs/is-on-duty"
+            ]
+          },
+          {
+            "group": "Money",
+            "pages": [
+              "api/money/overview",
+              "api/money/get",
+              "api/money/add",
+              "api/money/remove",
+              "api/money/can-afford"
+            ]
+          },
+          {
+            "group": "Inventory",
+            "pages": [
+              "api/inventory/overview",
+              "api/inventory/has-item",
+              "api/inventory/get-item-count",
+              "api/inventory/add-item",
+              "api/inventory/remove-item",
+              "api/inventory/can-carry",
+              "api/inventory/get-items",
+              "api/inventory/metadata"
+            ]
+          },
+          {
+            "group": "Callback / RPC",
+            "pages": [
+              "api/callback/overview",
+              "api/callback/register",
+              "api/callback/await",
+              "api/callback/permissions",
+              "api/callback/rate-limiting",
+              "api/callback/security-model"
+            ]
+          },
+          {
+            "group": "Permissions",
+            "pages": [
+              "api/permissions/overview",
+              "api/permissions/define",
+              "api/permissions/has",
+              "api/permissions/job-permissions",
+              "api/permissions/ace-permissions",
+              "api/permissions/multi-provider"
+            ]
+          },
+          {
+            "group": "Notifications",
+            "pages": [
+              "api/notifications/overview",
+              "api/notifications/send",
+              "api/notifications/providers",
+              "api/notifications/types",
+              "api/notifications/fallback"
+            ]
+          },
+          {
+            "group": "Locale",
+            "pages": [
+              "api/locale/overview",
+              "api/locale/register",
+              "api/locale/get",
+              "api/locale/shared-registration"
+            ]
+          },
+          {
+            "group": "Events",
+            "pages": [
+              "api/events/overview",
+              "api/events/on",
+              "api/events/emit",
+              "api/events/internal-bus"
+            ]
+          },
+          {
+            "group": "Player Lifecycle",
+            "pages": [
+              "api/lifecycle/overview",
+              "api/lifecycle/on-player-loaded",
+              "api/lifecycle/on-player-unloaded",
+              "api/lifecycle/on-job-changed",
+              "api/lifecycle/on-duty-changed"
+            ]
+          },
+          {
+            "group": "Logging",
+            "pages": [
+              "api/log/overview",
+              "api/log/debug",
+              "api/log/info",
+              "api/log/warn",
+              "api/log/error",
+              "api/log/is-enabled"
+            ]
+          },
+          {
+            "group": "Services",
+            "pages": [
+              "api/services/overview",
+              "api/services/register",
+              "api/services/get",
+              "api/services/has",
+              "api/services/architecture"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "api/features/overview",
+              "api/features/register",
+              "api/features/has"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "api/integrations/overview",
+              "api/integrations/get-name",
+              "api/integrations/is-available",
+              "api/integrations/is-healthy",
+              "api/integrations/get-capabilities"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "api/components/overview",
+              "api/components/get",
+              "api/components/get-all"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "api/resources/overview",
+              "api/resources/register",
+              "api/resources/requirements",
+              "api/resources/core-version-requirements",
+              "api/resources/capability-requirements"
+            ]
+          },
+          {
+            "group": "Database",
+            "pages": [
+              "api/db/overview",
+              "api/db/query",
+              "api/db/single",
+              "api/db/scalar",
+              "api/db/insert",
+              "api/db/update",
+              "api/db/transaction"
+            ]
+          },
+          {
+            "group": "Migrations",
+            "pages": [
+              "api/migrations/overview",
+              "api/migrations/system",
+              "api/migrations/ids",
+              "api/migrations/checksums",
+              "api/migrations/applied",
+              "api/migrations/safe-behavior"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  }
+}

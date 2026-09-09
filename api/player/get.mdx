@@ -1,0 +1,57 @@
+---
+title: "Player.Get: normalized player snapshot"
+sidebarTitle: "Player.Get"
+description: "Returns a normalized NEXM player snapshot for the given source, handling framework differences internally."
+---
+
+Returns a normalized NEXM player snapshot. NEXM Core hides framework-specific player retrieval behind a single call.
+
+## Signature
+
+```lua
+local player, err = NEXM.Player.Get(source)
+```
+
+## Side
+
+Server
+
+## Parameters
+
+<ParamField path="source" type="number">
+  The player server ID.
+</ParamField>
+
+## Returns
+
+Returns `player, err` following the NEXM [getter pattern](/reference/error-model).
+
+## Example
+
+```lua
+local NEXM = exports['nexm_core']:GetCoreObject()
+
+local player, err = NEXM.Player.Get(source)
+
+if not player then
+    print(err.code, err.message)
+    return
+end
+
+print(player.identifier)
+print(player.name)
+print(player.framework)
+```
+
+## Notes
+
+The returned player object is normalized and should be preferred over framework-specific player objects.
+
+<Info>
+  Additional parameter fields, return schema, and edge cases: fill in from NEXM Core source documentation.
+</Info>
+
+## Related
+
+- [Player API overview](/api/player/overview)
+- [Error model](/reference/error-model)

@@ -1,0 +1,97 @@
+---
+title: "NEXM Core API reference"
+sidebarTitle: "Introduction"
+description: "Overview of the NEXM Core API modules, return conventions, and how to use getters, mutations, and predicates across server and client contexts."
+---
+
+The NEXM Core API provides a unified interface for common FiveM operations. It normalizes behavior across ESX, QBCore, and Qbox so you can write framework-agnostic scripts.
+
+## API modules
+
+<CardGroup cols={3}>
+  <Card title="Player" href="/api/player/overview">
+    Normalized player snapshots and properties.
+  </Card>
+
+  <Card title="Jobs" href="/api/jobs/overview">
+    Job checks, grades, and duty state.
+  </Card>
+
+  <Card title="Money" href="/api/money/overview">
+    Account balances and transactions.
+  </Card>
+
+  <Card title="Inventory" href="/api/inventory/overview">
+    Item queries and mutations.
+  </Card>
+
+  <Card title="Callback" href="/api/callback/overview">
+    Async client/server callbacks.
+  </Card>
+
+  <Card title="Permissions" href="/api/permissions/overview">
+    Permission and role checks.
+  </Card>
+
+  <Card title="Notifications" href="/api/notifications/overview">
+    Notify helpers.
+  </Card>
+
+  <Card title="Locale" href="/api/locale/overview">
+    Localization and string lookups.
+  </Card>
+
+  <Card title="Events" href="/api/events/overview">
+    Event utilities.
+  </Card>
+
+  <Card title="Player Lifecycle" href="/api/player-lifecycle/overview">
+    Join, drop, and spawn hooks.
+  </Card>
+
+  <Card title="Logging" href="/api/logging/overview">
+    Structured logging.
+  </Card>
+
+  <Card title="Services" href="/api/services/overview">
+    Internal service registry.
+  </Card>
+
+  <Card title="Features" href="/api/features/overview">
+    Feature flags and toggles.
+  </Card>
+
+  <Card title="Integrations" href="/api/integrations/overview">
+    Third-party integrations.
+  </Card>
+
+  <Card title="Components" href="/api/components/overview">
+    Shared component helpers.
+  </Card>
+
+  <Card title="Resources" href="/api/resources/overview">
+    Resource management.
+  </Card>
+
+  <Card title="Database" href="/api/database/overview">
+    Database helpers.
+  </Card>
+
+  <Card title="Migrations" href="/api/migrations/overview">
+    Schema migrations.
+  </Card>
+</CardGroup>
+
+## Return conventions
+
+NEXM Core uses three return patterns consistently:
+
+- **Getters** return `value, err`. On success, `value` is populated and `err` is `nil`. On failure, `value` is `nil` and `err` is an error object.
+- **Mutations** return `ok, err`. On success, `ok` is `true`. On failure, `ok` is `false` and `err` describes what went wrong.
+- **Predicates** return `boolean, err`. A `false` result means the condition is not met. An `err` object means the check itself failed (for example, invalid input or a missing player).
+
+See the [error model](/reference/error-model) for the shape of `err` objects and how to handle them.
+
+## Server vs Client
+
+Some APIs are server-side only. Others are safe to call from the client. See [Server vs Client](/api/server-vs-client) for the full split.

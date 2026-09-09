@@ -1,0 +1,47 @@
+---
+title: "Inventory.GetItemCount: retrieve item quantity"
+sidebarTitle: "GetItemCount"
+description: "Retrieve the quantity of a specific item held by a player through the NEXM Inventory API."
+---
+
+Retrieve the quantity of a specific item held by a player. NEXM Core normalizes count retrieval across supported inventory backends.
+
+## Signature
+
+<Info>
+  Source content pending. Signature, parameters, return schema, and examples will be filled in from the NEXM Core source documentation.
+</Info>
+
+## Side
+
+Server
+
+## Parameters
+
+<Info>
+  Source content pending. Fill in from NEXM Core source documentation.
+</Info>
+
+## Returns
+
+Returns `count, err` following the NEXM [getter pattern](/reference/error-model).
+
+## Example
+
+```lua
+local NEXM = exports['nexm_core']:GetCoreObject()
+
+-- Example: get the count of an item for a player
+-- local count, err = NEXM.Inventory.GetItemCount(source, itemName, metadata)
+-- if not count then
+--     print(err.code, err.message)
+--     return
+-- end
+-- print(count)
+```
+
+## Related
+
+- [Inventory API overview](/api/inventory/overview)
+- [Error model](/reference/error-model)
+- [Inventory metadata](/api/inventory/metadata)

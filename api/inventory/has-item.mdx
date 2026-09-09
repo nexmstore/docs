@@ -1,0 +1,51 @@
+---
+title: "Inventory.HasItem: check player item possession"
+sidebarTitle: "HasItem"
+description: "Check whether a player has a specific item. Returns false if absent, and returns an error only when the check itself fails."
+---
+
+Check whether a player has a specific item. This is a predicate method: it returns `false` when the item is absent, and returns an error only when the check itself fails.
+
+<Note>
+  `false` means the item is not present. An error (`err ~= nil`) means the check could not be completed. Do not treat `false` as an error.
+</Note>
+
+## Signature
+
+<Info>
+  Source content pending. Signature, parameters, return schema, and examples will be filled in from the NEXM Core source documentation.
+</Info>
+
+## Side
+
+Server
+
+## Parameters
+
+<Info>
+  Source content pending. Fill in from NEXM Core source documentation.
+</Info>
+
+## Returns
+
+Returns a boolean and an error following the NEXM [getter pattern](/reference/error-model).
+
+## Example
+
+```lua
+local NEXM = exports['nexm_core']:GetCoreObject()
+
+-- Example: check if a player has a specific item
+-- local hasItem, err = NEXM.Inventory.HasItem(source, itemName, metadata)
+-- if err then
+--     print(err.code, err.message)
+--     return
+-- end
+-- print(hasItem)
+```
+
+## Related
+
+- [Inventory API overview](/api/inventory/overview)
+- [Error model](/reference/error-model)
+- [Inventory metadata](/api/inventory/metadata)

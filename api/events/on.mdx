@@ -1,0 +1,46 @@
+---
+title: "Event.On: register an event handler"
+sidebarTitle: "Event.On"
+description: "Register a handler for a named event. NEXM Core normalizes event registration across server and client contexts."
+---
+
+Register a handler for a named event. NEXM Core normalizes event registration across server and client contexts.
+
+## Signature
+
+<Info>
+  Source content pending. Signature, parameters, return schema, and examples will be filled in from the NEXM Core source documentation.
+</Info>
+
+## Side
+
+Server / Client
+
+## Parameters
+
+<Info>
+  Source content pending. Fill in from NEXM Core source documentation.
+</Info>
+
+## Returns
+
+<Info>
+  Source content pending. Fill in from NEXM Core source documentation.
+</Info>
+
+## Example
+
+```lua
+local NEXM = exports['nexm_core']:GetCoreObject()
+
+-- Register an event handler
+NEXM.Event.On('myEvent', function(data)
+    -- handle event
+end)
+```
+
+## Related
+
+- [Event API overview](/api/events/overview)
+- [Event.Emit](/api/events/emit)
+- [Internal Bus](/api/events/internal-bus)

@@ -1,0 +1,49 @@
+---
+title: "Inventory API: item and metadata operations"
+sidebarTitle: "Overview"
+description: "The Inventory API provides normalized item checks, mutations, and metadata operations across supported FiveM inventory systems."
+---
+
+The `Inventory` module exposes normalized item operations across supported FiveM inventory backends.
+
+## Methods
+
+<CardGroup cols={2}>
+  <Card title="Inventory.HasItem" href="/api/inventory/has-item">
+    Check whether a player has an item.
+  </Card>
+
+  <Card title="Inventory.GetItemCount" href="/api/inventory/get-item-count">
+    Get the count of an item for a player.
+  </Card>
+
+  <Card title="Inventory.AddItem" href="/api/inventory/add-item">
+    Add an item to a player's inventory.
+  </Card>
+
+  <Card title="Inventory.RemoveItem" href="/api/inventory/remove-item">
+    Remove an item from a player's inventory.
+  </Card>
+
+  <Card title="Inventory.CanCarry" href="/api/inventory/can-carry">
+    Check whether a player can carry an item.
+  </Card>
+
+  <Card title="Inventory.GetItems" href="/api/inventory/get-items">
+    Get a player's inventory items.
+  </Card>
+
+  <Card title="Inventory.Metadata" href="/api/inventory/metadata">
+    Metadata handling and constraints.
+  </Card>
+</CardGroup>
+
+## Side
+
+<Warning>
+  Server-side only. Never perform inventory mutations from the client. See [Security Model](/concepts/security-model).
+</Warning>
+
+<Info>
+  Server or Client availability per method: see individual method pages.
+</Info>

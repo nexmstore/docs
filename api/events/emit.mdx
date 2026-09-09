@@ -1,0 +1,44 @@
+---
+title: "Event.Emit: emit an event to targets"
+sidebarTitle: "Event.Emit"
+description: "Emit a named event to specific targets. NEXM Core routes events across server, client, and the internal bus."
+---
+
+Emit a named event to specific targets. NEXM Core routes events across server, client, and the internal bus.
+
+## Signature
+
+<Info>
+  Source content pending. Signature, parameters, return schema, and examples will be filled in from the NEXM Core source documentation.
+</Info>
+
+## Side
+
+Server / Client
+
+## Parameters
+
+<Info>
+  Source content pending. Fill in from NEXM Core source documentation.
+</Info>
+
+## Returns
+
+<Info>
+  Source content pending. Fill in from NEXM Core source documentation.
+</Info>
+
+## Example
+
+```lua
+local NEXM = exports['nexm_core']:GetCoreObject()
+
+-- Emit an event to a target
+NEXM.Event.Emit('myEvent', { payload = 'data' })
+```
+
+## Related
+
+- [Event API overview](/api/events/overview)
+- [Event.On](/api/events/on)
+- [Internal Bus](/api/events/internal-bus)

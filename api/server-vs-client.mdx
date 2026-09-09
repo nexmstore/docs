@@ -1,0 +1,59 @@
+---
+title: "Server vs Client API availability"
+sidebarTitle: "Server vs Client"
+description: "Which NEXM Core APIs are available on the server, which are safe on the client, and which operations must never run client-side."
+---
+
+NEXM Core exposes some APIs on both sides and others only on the server. Use this page to decide where each call belongs.
+
+## Server-side APIs
+
+These modules and operations are available only on the server:
+
+- Player (full module)
+- Jobs
+- Money
+- Inventory mutations
+- Permissions
+- Callback (registration and handling)
+- Events (server emitters)
+- Locale (server context)
+- Log / Audit
+- Validate
+- RateLimit
+- Resources
+- Services
+- Features
+- Integrations
+- Components
+- Version
+- Database
+- Migrations
+
+## Client-side safe APIs
+
+These modules are safe to use from the client:
+
+- Player (read-only queries)
+- Callback (triggering)
+- Notify
+- Locale
+- Events (client emitters)
+- Validate
+- Version
+
+<Warning>
+  Money, inventory mutations, and permissions must be handled server-side. Never perform these operations from the client. See [Security Model](/concepts/security-model).
+</Warning>
+
+## Visual reference
+
+<CardGroup cols={2}>
+  <Card title="Server only" icon="server">
+    Player, Jobs, Money, Inventory, Permissions, Callback (register), Events (server), Locale, Log, Audit, Validate, RateLimit, Resources, Services, Features, Integrations, Components, Version, DB, Migrations
+  </Card>
+
+  <Card title="Client safe" icon="desktop">
+    Player (read), Callback (trigger), Notify, Locale, Events (client), Validate, Version
+  </Card>
+</CardGroup>
